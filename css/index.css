@@ -1,0 +1,335 @@
+*{
+    font-family: 'Jua', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 1350px){
+    .no-page{
+        display: flex;
+        justify-content: center;
+        margin-top: 5rem;
+    }
+    #navbar, #greeting, #elice_hello, #aboutMe, #contents, #project, #footer{
+        display: none;
+    }
+}
+
+@media (min-width: 1350px){
+
+.no-page{
+    display: none;
+}
+/*레이아웃 설정*/
+.container{
+    width: 100%;
+    padding-right: 0.2rem;
+    padding-left: 0.2rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.section-title {
+    text-align: center;
+    padding: 40px;
+}
+
+.section-title h2 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.section-title hr{
+    padding-top: 5px;
+    margin: 0 auto;
+}
+
+
+/* nav 바 */
+.navbar{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2E8B57;
+    font-size: 20px;
+}
+
+.navbar a{
+    color: white;
+    text-decoration: none;
+}
+.navbar a:hover{
+    color: lightgray;
+    text-decoration: none;
+}
+
+.nav_logo{
+    padding-left: 30px;
+    font-size: 40px;
+}
+
+.nav_menu {
+    display: flex;
+    list-style: none;
+}
+
+ul.nav_menu {
+    margin: 0;
+}
+
+.nav_menu li{
+    padding: 8px 13px;
+    margin-right: 50px;
+}
+/* =========== End of nav바============= */
+
+
+/* greet */
+.greet {
+    width: 100%;
+    height: 650px;
+    padding: 50px;
+    background-color: rgb(252, 252, 252);
+}
+
+#hello {
+    width: 130px;
+    height: 260px;
+    
+    background: url("../img/hi_ani_2.jpg") no-repeat 0 0 / auto 260px;
+    /* animation-name: hi;
+    animation-duration: 3s;
+    animation-iteration-count : infinite;
+    */
+
+    animation : hi 1s infinite steps(2);
+    margin: 0 auto;
+}
+
+/* 1_애니 : 130x260
+2_애니 : 160x260 
+hi_ani : 292x260*/
+@keyframes hi {
+    from {background-position : 0 0;}
+    to {background-position: -260px 0; width: 200px;}
+
+}
+
+#hello_text {
+    text-align: center;
+    font-size: 50px;
+    margin: 60px;
+    font-family: 'Jua', sans-serif;
+    text-shadow: 0px 10px 10px rgba(68,68,68,0.4);
+}
+
+#hello_text span {
+    color: #fdfdfd;
+    /* 글자 테두리만 적용하기 */
+    -webkit-text-stroke-width: 2px;
+	-webkit-text-stroke-color: black;
+}
+/* =========== End of greet============= */
+
+
+/*elicer*/
+.elicer{
+    height: 630px;
+    background-color: #F0FFF0;
+}
+
+ul.elicer-list{
+    list-style: none;
+}
+
+ul.elicer-list li {
+    /* 질문 사이의 간격 띄우기 */
+    border-top: 5px solid #fff;
+    border-bottom: 5px solid #eee;
+    margin: 5px;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+.elicer-list a {
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: #1f6d2f;
+}
+
+.elicer-list p {
+    font-size: 1.2rem;
+    padding: 10px 0 0 0;
+}
+
+.elicer-list a:hover {
+    /* elicer의 질문부분에 마우스를 댔을 때 나오는 색상 */
+    color: lightgray;
+    text-decoration: none;
+}
+/* =========== End of elicer============= */
+
+
+/* about me */
+.aboutMe {
+    height: 520px;
+    background-color: #365036;
+}
+
+.like-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.box{
+    width: 350px;
+    height: 350px;
+    background-size: cover;
+}
+
+.box p {
+    margin-top: 30px;
+    font-size: 25px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.692);
+}
+
+.box1{
+    background-image: url(../img/youtube.png);
+}
+.box2{
+    background: url(../img/greenGrape.jpg) no-repeat center;
+}
+.box3{
+    background: url(../img/cat1.jpg) no-repeat center;
+}
+
+/* 박정미 소개======*/
+.contents{
+    position: relative;
+    /* border: 2px solid yellow; */
+    background-color: #365036;
+    height: 800px;
+
+}
+
+.buttons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 2em;
+}
+
+.buttons .btn{
+    width: 136px; height: 136px;
+    margin-right: 0.7rem;
+    font-size: 5em;
+    background-color: rgb(33, 122, 41);
+    color: #eee;
+    border-radius : 20px;
+    box-shadow : 3px 3px 3px rgb(10, 20, 4);
+    transition-duration: 0.3s;
+
+}
+
+.buttons .btn:active{
+    margin-left: 5px;
+    margin-top : 5px;
+    box-shadow : none;
+}
+
+.buttons .btn:hover{
+    color: #365036;
+}
+
+.me_content{
+    /* border: 2px solid orange; */
+    position: absolute;
+    top: 30%;
+
+    display: grid;
+    grid-template-columns: 600px 1fr;
+    /* 첫번째 덩어리는 500px로 쓰고 나머지는 전부다 쓰도록 */
+    
+}
+
+.me_img{
+    width: 450px; height: 450px;
+    border-radius: 50%;
+    border: rgb(150, 150, 62) 5px solid;
+}
+
+.me_text{
+    color: #ddd;
+    width: 600px;
+    margin: auto;
+}
+
+.quote-icon-left,
+.quote-icon-right{
+    color: yellow;
+}
+/* =========== End of aboutMe============= */
+
+
+/* project */
+.project{
+    height: 1200px;
+    background-color: #F0FFF0;
+}
+
+/* 프로젝트 이미지랑 디테일을 균등하게 배치*/
+.project-container{
+    display:flex;
+    justify-content: space-evenly;
+}
+
+.img-containers{
+    display: inline-grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 3rem;
+}
+
+.detail-containers{
+    display: inline-grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 3rem;
+}
+
+.item{
+    width: 500px; height: 300px;
+    /*border: 2px solid yellow;*/
+}
+
+.details{
+    padding-top: 5rem;    
+}
+
+.details h2,
+.details p{
+    text-align: center;
+}
+
+.details h2{
+    font-size: 2.8rem;
+}
+.details p{
+    font-size: 1.2rem;
+}
+/* =========== End of project============= */
+
+
+/* footer */
+#footer {
+    height: 100px;
+    background-color: #2E8B57;
+}
+#sprout{
+    display: grid;
+    place-content: center;
+    min-height: 10vh;
+    color: #71e688;
+    font-size: 2rem;
+}
+}/*end of media 퀴리*/
